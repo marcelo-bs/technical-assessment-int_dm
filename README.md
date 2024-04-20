@@ -1,68 +1,59 @@
-# OZmap Challenge: Construindo a Geolocalização do Futuro
+# Guia de Instalação e Execução
 
-Olá desenvolvedor(a)! Bem-vindo(a) ao Desafio Técnico do OZmap. Este é um projeto que simula um cenário real de nossa empresa, onde você irá desempenhar um papel crucial ao desenvolver uma API RESTful robusta para gerenciar usuários e localizações. Estamos muito animados para ver sua abordagem e solução!
+Este é um guia rápido para instalar e executar o projeto.
 
-## 🌍 **Visão Geral**
+## Instalação
 
-Em um mundo conectado e globalizado, a geolocalização se torna cada vez mais essencial. E aqui no OZmap, buscamos sempre otimizar e melhorar nossos sistemas. Assim, você encontrará um protótipo que precisa de sua experiência para ser corrigido, melhorado e levado ao próximo nível.
+### Repositório Git
 
-## 🛠 **Especificações Técnicas**
+Clone este repositório para a sua máquina local usando o seguinte comando:
 
-- **Node.js**: Versão 20 ou superior.
-- **Banco de Dados**: Mongo 7+.
-- **ORM**: Mongoose / Typegoose.
-- **Linguagem**: Typescript.
-- **Formatação e Linting**: Eslint + prettier.
-- **Comunicação com MongoDB**: Deve ser feita via container.
+```
+git clone https://github.com/marcelo-bs/technical-assessment-int_dm.git
+```
 
-## 🔍 **Funcionalidades Esperadas**
+Depois de clonar, acesse a branch que foi desenvolvida:
 
-### Usuários
-- **CRUD** completo para usuários.
-- Cada usuário deve ter nome, email, endereço e coordenadas.
-- Na criação, o usuário pode fornecer endereço ou coordenadas. Haverá erro caso forneça ambos ou nenhum.
-- Uso de serviço de geolocalização para resolver endereço ↔ coordenadas.
-- Atualização de endereço ou coordenadas deve seguir a mesma lógica.
+```
+git checkout marcelo-silveira
+```
 
-### Regiões
-- **CRUD** completo para regiões.
-- Cada região tem um nome, coordenadas e um usuário que será o dono da região.
-- Listar regiões contendo um ponto específico.
-- Listar regiões a uma certa distância de um ponto, com opção de filtrar regiões não pertencentes ao usuário que fez a requisição.
 
-### Autenticação
-- Autenticação não é necessária.
+### Dependências NPM
 
-### Testes
-- Unitários e de integração.
+Para instalar as dependências do projeto, execute o seguinte comando:
 
-## 🌟 **Diferenciais**
+```
+npm install
+```
 
-- Documentação completa da API.
-- Interface para visualização de logs.
-- Exportação de relatórios (.csv).
-- Cobertura de código.
 
-## ⚖ **Critérios de Avaliação**
+### .env
 
-1. Organização e clareza do código.
-2. Estruturação do projeto.
-3. Qualidade e eficiência do código.
-4. Cobertura e qualidade de testes.
-5. Pontos diferenciais citados acima.
-6. Tempo de entrega.
-7. Padronização e clareza das mensagens de erro.
-8. Organização dos commits.
-9. Implementação de logs.
-10. Adesão às boas práticas de API RESTful.
+**Crie um arquivo .env contendo as mesmas variáveis que estão presentes no arquivo .env.example e cole no arquivo criado**
 
-## 🚀 **Entrega**
 
-1. Faça um fork deste repositório.
-2. Crie uma branch com o padrão `seu-nome-sobrenome`.
-3. Envie um email `rh@ozmap.com.br` informando que o teste foi concluído.
-4. Aguarde nosso feedback.
 
----
+### Docker
 
-Estamos ansiosos para ver sua implementação e criatividade em ação! Boa sorte e que a força do código esteja com você! 🚀
+Este projeto pode ser executado utilizando Docker. Certifique-se de ter o Docker e o Docker Compose instalados.
+
+Para iniciar o projeto com Docker, execute o seguinte comando:
+
+```
+docker-compose up -d
+```
+
+
+## Execução em Ambiente de Desenvolvimento
+
+Para iniciar o projeto em modo de desenvolvimento, execute o seguinte comando:
+
+```
+npm run dev
+```
+Isso iniciará o servidor de desenvolvimento.
+
+## Documentação Swagger
+
+Abra http://localhost:3003/api-docs/ em seu navegador para acessar a documentação da API.
